@@ -1,0 +1,25 @@
+.recomandation-movie{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:150px;
+    height:100px;
+    border:1px solid #fff;
+    border-radius: 5px;
+    color:#E5E5E5;
+    overflow: hidden;
+    cursor:pointer;
+}
+.safety-div{
+    display:flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items:center;
+}
+.safety-div .title{
+    font-size: 1rem;
+}
+
+.no-image{
+    font-size: 0.8rem;
+}
