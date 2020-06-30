@@ -4,6 +4,19 @@ import { connect } from "react-redux";
 import RecomandationMovie from "../RecommendationMovie/recommendationMovie";
 
 const Recommendations = ({ recommendations}) => {
+
+const generateRecommendationMovie = (movie,index)=>{
+  while (index <= 5) {
+    return (
+      <RecomandationMovie
+        key={movie.id}
+        imagePath={movie.backdrop_path}
+        title={movie.title}
+      />
+    );
+  }
+}
+
   return (
     <div className="today_recomandation_section">
       <div className="free-column"></div>
@@ -13,15 +26,17 @@ const Recommendations = ({ recommendations}) => {
         </div>
         <div className="recomandations-movies">
           {Object.values(recommendations).map((recomandation, index) => {
-            while (index <= 5) {
-              return (
-                <RecomandationMovie
-                  key={recomandation.id}
-                  imagePath={recomandation.backdrop_path}
-                  title={recomandation.title}
-                />
-              );
-            }
+            // while (index <= 5) {
+            //   return (
+            //     <RecomandationMovie
+            //       key={recomandation.id}
+            //       imagePath={recomandation.backdrop_path}
+            //       title={recomandation.title}
+            //     />
+            //   );
+            // }
+
+            return generateRecommendationMovie(recomandation, index);
           })}
         </div>
       </div>

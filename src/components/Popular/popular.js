@@ -1,44 +1,60 @@
-import React from "react";
+import React, { Fragment, useState } from "react";
 import "./popular.css";
+import { connect } from "react-redux";
+import Movie from "../Movie/movie";
 import arrow from "../../assets/images_and_icons/arrow.png";
-import badge from "../../assets/images_and_icons/badge.png";
+import arrowClose from "../../assets/images_and_icons/arrow-close.png";
 
-const Popular = () => {
+const Popular = ({ popularMovies }) => {
+  const [view, setView] = useState(false);
+
+  const handleView = () => {
+    setView(!view);
+  };
+
   return (
-    <div className="popular_movies_section">
+    <div
+      className="popular_movies_section"
+      style={
+        view
+          ? { overflow: "visible", height: "auto" }
+          : { overflow: "hidden", height: "390px" }
+      }
+    >
       <div className="popular_movies-title">
         <h1>Popular Movies</h1>
         <h2>to Watch Now</h2>
         <hr className="text-hr" />
-        <h5 role="button">
-          view all
-          <img src={arrow} alt="arrow" />
+        <h5 role="button" onClick={handleView}>
+          {view ? (
+            <Fragment>
+              hide
+              <img src={arrowClose} alt="arrow close" />
+            </Fragment>
+          ) : (
+            <Fragment>
+              view all
+              <img src={arrow} alt="arrow" />
+            </Fragment>
+          )}
         </h5>
       </div>
-      <div className="movie">
-        <div className="badge">
-          <img src={badge} alt="badge" />
-        </div>
-        <div className="favorite-selector">
-          <select name="options" className="selector" role="button">
-            <option value="Favorite">Favorite</option>
-            <option value="Remove">Remove</option>
-          </select>
-        </div>
-      </div>
-      <div className="movie"></div>
-      <div className="movie"></div>
-      <div className="movie"></div>
-      <div className="movie"></div>
-      <div className="movie"></div>
-      <div className="movie"></div>
-      <div className="movie"></div>
-      <div className="movie"></div>
-      <div className="movie"></div>
-      <div className="movie"></div>
-      <div className="movie"></div>
+      {Object.values(popularMovies).map((popularMovie) => (
+        <Movie
+          key={popularMovie.id}
+          id={popularMovie.id}
+          imagePath={popularMovie.poster_path}
+          title={popularMovie.title}
+          votes={popularMovie.vote_average}
+        />
+      ))}
     </div>
   );
 };
+const mapStateToProps = (state) => {
+  return {
+    popularMovies: state.movies.popularMovies,
+  };
+};
 
-export default Popular;
+export default connect(mapStateToProps)(Popular);
