@@ -1,36 +1,55 @@
 /* MY FAVORITES SECTION */
 
-.my-favorites-section{
-    display:grid;
-    grid-template-columns: repeat(7, auto);
-    color:#E5E5E5;
+.my-favorites-section {
+    display: grid;
+    grid-template-columns: 20% 75%;
+    grid-column-gap: 15px;
+    color: #E5E5E5;
     padding: 50px 0;
 }
 
-.my-favorites-title{
-    grid-column: 1 / span 2;
-    display:flex;
+.my-favorites-title {
+    display: flex;
     flex-direction: column;
-    justify-content: space-between;
-}
-.my-favorites-title h1{
-    font-size:2.2rem;
-}
-.buttons-container{
-    display:flex;
-    justify-content: flex-start;
-}
-.button-left,
-.button-right{
-    opacity:0.6;
-}
-.button-left:hover{
-    opacity:1;
-}
-.button-right:hover{
-    opacity:1;
+    justify-content: space-evenly;
 }
 
-.button-left{
-    margin-right:20px;
+.my-favorites-title h1 {
+    font-size: 2.2rem;
+}
+
+.buttons-container {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.button-left,
+.button-right {
+    opacity: 0.6;
+}
+
+.button-left:hover {
+    opacity: 1;
+}
+
+.button-right:hover {
+    opacity: 1;
+}
+
+.button-left {
+    margin-right: 20px;
+}
+
+.my-favorites-movie-container {
+    overflow: hidden;
+}
+
+.my-favorites-slider {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(50, auto);
+    grid-column-gap: 20px;
+    color: #E5E5E5;
+    padding: 50px 0;
+    transition: transform 1s;
 }

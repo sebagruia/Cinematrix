@@ -19,8 +19,11 @@ const Movie = ({ dispatch, imagePath, title, id, votes }) => {
   const myStorage = window.localStorage;
 
   const handleOnChange = (event) => {
+
     setValue(event.target.value);
+
     if (event.target.value === "favorite") {
+
       if (myStorage.getItem(id) === null) {
         addToFavoriteToLocalStorage(
           JSON.stringify(id),
@@ -30,13 +33,16 @@ const Movie = ({ dispatch, imagePath, title, id, votes }) => {
       } else {
         alert("This Movie is already your Favorite list");
       }
+
     } else {
+
       if (myStorage.getItem(id) === null) {
         alert("This Movie is not in your Favorite list");
       } else {
         removeFavoriteFromLocalStorage(JSON.stringify(id));
         dispatch(removeFavoriteMovieAction(window.localStorage));
       }
+      
     }
   };
 
