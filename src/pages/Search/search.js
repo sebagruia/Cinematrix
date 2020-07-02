@@ -7,7 +7,6 @@ import backArrow from "../../assets/images_and_icons/back-arrow.png";
 
 const Search = (props) => {
   const { searchedMovies } = props;
-  console.log(props);
   const { query } = props.location.state;
   return (
     <div className="container search">

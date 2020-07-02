@@ -7,53 +7,63 @@ export const ADD_FAVORITE_MOVIES = "ADD_FAVORITE_MOVIES";
 export const REMOVE_FAVORITE_MOVIES = "REMOVE_FAVORITE_MOVIES";
 export const GET_SEARCHED_MOVIES = "GET_SEARCHED_MOVIES";
 
-
 export const getMovieRecommendationsAction = () => async (dispatch) => {
   dispatch(showLoading());
-  const genreId = generatingGenreIdArray();
-  const data = await fetch(
-    `https://api.themoviedb.org/3/movie/${genreId}/recommendations?api_key=ef3ea0075e58d32f265c175d329ef49e&language=en-US&page=1`
-  );
-  const recommendations = await data.json();
-  dispatch({
-    type: GET_MOVIE_RECOMMENDATIONS,
-    payload: recommendations.results,
-  });
-  dispatch(hideLoading());
+  try {
+    const genreId = generatingGenreIdArray();
+    const data = await fetch(
+      `https://api.themoviedb.org/3/movie/${genreId}/recommendations?api_key=ef3ea0075e58d32f265c175d329ef49e&language=en-US&page=1`
+    );
+    const recommendations = await data.json();
+    dispatch({
+      type: GET_MOVIE_RECOMMENDATIONS,
+      payload: recommendations.results,
+    });
+  } catch (error) {
+    console.log(`Error when fetching Recomandations ${error}`);
+  }
 };
 
 export const getPopularMoviesAction = () => async (dispatch) => {
-  const data = await fetch(
-    "https://api.themoviedb.org/3/movie/popular?api_key=ef3ea0075e58d32f265c175d329ef49e&language=en-US&page=1"
-  );
-  const popularMovies = await data.json();
-  dispatch({
-    type: GET_POPULAR_MOVIES,
-    payload: popularMovies.results,
-  });
+  try {
+    const data = await fetch(
+      "https://api.themoviedb.org/3/movie/popular?api_key=ef3ea0075e58d32f265c175d329ef49e&language=en-US&page=1"
+    );
+    const popularMovies = await data.json();
+    dispatch({
+      type: GET_POPULAR_MOVIES,
+      payload: popularMovies.results,
+    });
+  } catch (error) {
+    console.log(`Error when fetching Popular Movies ${error}`);
+  }
+
+  dispatch(hideLoading());
 };
 
-export const getMyFavoriteMovies = ()=>{
-   return{
-    type:GET_FAVORITE_MOVIES,
+export const getMyFavoriteMovies = () => {
+  return {
+    type: GET_FAVORITE_MOVIES,
     payload: window.localStorage,
-   }
-}
+  };
+};
 
-export const addFavoriteMovieAction = (favoriteMovies)=>{
-  return{
+export const addFavoriteMovieAction = (favoriteMovies) => {
+  return {
     type: ADD_FAVORITE_MOVIES,
-    payload: favoriteMovies
-  }
-}
-export const removeFavoriteMovieAction = (favoriteMovies)=>{
-  return{
+    payload: favoriteMovies,
+  };
+};
+export const removeFavoriteMovieAction = (favoriteMovies) => {
+  return {
     type: REMOVE_FAVORITE_MOVIES,
-    payload: favoriteMovies
-  }
-}
+    payload: favoriteMovies,
+  };
+};
 
-export const searchMoviesAction = (query)=>async (dispatch)=>{
+export const searchMoviesAction = (query) => async (dispatch) => {
+  dispatch(showLoading());
+  try {
     const data = await fetch(
       `https://api.themoviedb.org/3/search/movie?api_key=ef3ea0075e58d32f265c175d329ef49e&language=en-US&query=${query}&page=1&include_adult=false`
     );
@@ -62,10 +72,9 @@ export const searchMoviesAction = (query)=>async (dispatch)=>{
       type: GET_SEARCHED_MOVIES,
       payload: searchedMovies.results,
     });
+  } catch (error) {
+    console.log(`Error when fetching Searched Movies ${error}`);
+  }
 
-
-
-}
-
-
-
+  dispatch(hideLoading());
+};

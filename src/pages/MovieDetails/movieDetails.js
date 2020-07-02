@@ -12,7 +12,6 @@ const MovieDetails = (props) => {
     release_date,
     votes,
   } = props.location.state;
-  console.log(imagePath);
   return (
     <div className=" container movieDetails-container">
       <Link to="/">
