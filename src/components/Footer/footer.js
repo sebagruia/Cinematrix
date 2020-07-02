@@ -9,14 +9,14 @@ const Footer = () => {
       <div className="copyright">
         <p>copyright SebastianGruia</p>
         <div className="gitHub-container">
-          <a href="https://github.com/sebagruia" target="_blank"><img src={gitHubIcon} alt="GitHub icon" /></a>
+          <a href="https://github.com/sebagruia" target="_blank" rel="noopener noreferrer"><img src={gitHubIcon} alt="GitHub icon" /></a>
         </div>
       </div>
 
       <div className="powered">
         <p>powered by</p>
         <div className="theMovieLogo-container">
-          <a href="https://www.themoviedb.org/" target="_blank"><img src={theMovieLogo} alt="log of The Movie Api" /></a>
+          <a href="https://www.themoviedb.org/" target="_blank" rel="noopener noreferrer"><img src={theMovieLogo} alt="log of The Movie Api" /></a>
         </div>
       </div>
     </div>
