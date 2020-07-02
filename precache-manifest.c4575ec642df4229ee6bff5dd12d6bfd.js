@@ -1,27 +1,31 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "0c2ded4576ffea64a41c5f32319407b8",
+    "revision": "34ccae66cf4e347075ee5a1c9240affe",
     "url": "/Cinematrix/index.html"
   },
   {
-    "revision": "9f31b48bf9094c6cfd32",
-    "url": "/Cinematrix/static/css/main.2638639b.chunk.css"
+    "revision": "8ef5178cca9b877c1f54",
+    "url": "/Cinematrix/static/css/main.ad3733b0.chunk.css"
   },
   {
-    "revision": "39ecab01e67b341c2a43",
-    "url": "/Cinematrix/static/js/2.7493d6aa.chunk.js"
+    "revision": "74d7ec0389d309546401",
+    "url": "/Cinematrix/static/js/2.e36b20e9.chunk.js"
   },
   {
     "revision": "3453b8997016469371284a28c0e873e2",
-    "url": "/Cinematrix/static/js/2.7493d6aa.chunk.js.LICENSE.txt"
+    "url": "/Cinematrix/static/js/2.e36b20e9.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "9f31b48bf9094c6cfd32",
-    "url": "/Cinematrix/static/js/main.c539d453.chunk.js"
+    "revision": "8ef5178cca9b877c1f54",
+    "url": "/Cinematrix/static/js/main.82fd145c.chunk.js"
   },
   {
     "revision": "fe12bbbdc06a0223ffce",
     "url": "/Cinematrix/static/js/runtime-main.7deb2310.js"
+  },
+  {
+    "revision": "0896cd36031d4b0cd2a460e612567b0b",
+    "url": "/Cinematrix/static/media/logo_dark_blue.0896cd36.png"
   },
   {
     "revision": "fbd386c13999f7834206b310c1cff619",
