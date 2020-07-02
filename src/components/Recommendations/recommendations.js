@@ -3,19 +3,23 @@ import "./recommendations.css";
 import { connect } from "react-redux";
 import RecomandationMovie from "../RecommendationMovie/recommendationMovie";
 
-const Recommendations = ({ recommendations}) => {
-
-const generateRecommendationMovie = (movie,index)=>{
-  while (index <= 5) {
-    return (
-      <RecomandationMovie
-        key={movie.id}
-        imagePath={movie.backdrop_path}
-        title={movie.title}
-      />
-    );
-  }
-}
+const Recommendations = ({ recommendations }) => {
+  
+  const generateRecommendationMovie = (movie, index) => {
+    while (index <= 5) {
+      return (
+        <RecomandationMovie
+          key={movie.id}
+          imagePath={movie.backdrop_path}
+          title={movie.title}
+          id={movie.id}
+          overview={movie.overview}
+          release_date={movie.release_date}
+          votes={movie.vote_average}
+        />
+      );
+    }
+  };
 
   return (
     <div className="today_recomandation_section">
@@ -26,16 +30,6 @@ const generateRecommendationMovie = (movie,index)=>{
         </div>
         <div className="recomandations-movies">
           {Object.values(recommendations).map((recomandation, index) => {
-            // while (index <= 5) {
-            //   return (
-            //     <RecomandationMovie
-            //       key={recomandation.id}
-            //       imagePath={recomandation.backdrop_path}
-            //       title={recomandation.title}
-            //     />
-            //   );
-            // }
-
             return generateRecommendationMovie(recomandation, index);
           })}
         </div>

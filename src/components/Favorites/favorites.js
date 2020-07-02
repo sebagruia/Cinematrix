@@ -10,11 +10,11 @@ let move = 0;
 const Favorites = ({ favoriteMovies }) => {
   const [goLeft, setGoLeft] = useState({});
 
-  let sliderLength = Object.values(favoriteMovies).length;
+// The logic behind the slideShow functionality
+let sliderLength = Object.values(window.localStorage).length;
 
-  const onClickLeft = (event) => {
+  const onClickLeft = () => {
     const sliderSize = (- sliderLength * 120);
-    console.log(sliderSize)
     let go = (move -= 120);
     if (go > sliderSize) {
       setGoLeft({
@@ -26,10 +26,9 @@ const Favorites = ({ favoriteMovies }) => {
       });
       move = 0;
     }
-    console.log(go)
   };
-  const onClickRight = (event) => {
-    const sliderSize = sliderLength * 120;
+  const onClickRight = () => {
+    const sliderSize = (sliderLength * 120) 
     let go = (move += 120);
     if (go < sliderSize) {
       setGoLeft({
@@ -41,8 +40,8 @@ const Favorites = ({ favoriteMovies }) => {
       });
       move = 0;
     }
-    console.log(go)
   };
+  //==========================================
 
   return (
     <div className="my-favorites-section">
@@ -67,7 +66,9 @@ const Favorites = ({ favoriteMovies }) => {
                 id={movieParsed.id}
                 imagePath={movieParsed.imagePath}
                 title={movieParsed.title}
-                votes={movieParsed.vote_average}
+                overview={movieParsed.overview}
+                release_date={movieParsed.release_date}
+                votes={movieParsed.votes}
               />
             );
           })}

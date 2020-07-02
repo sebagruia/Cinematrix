@@ -45,6 +45,8 @@ const Popular = ({ popularMovies }) => {
           id={popularMovie.id}
           imagePath={popularMovie.poster_path}
           title={popularMovie.title}
+          overview={popularMovie.overview}
+          release_date={popularMovie.release_date}
           votes={popularMovie.vote_average}
         />
       ))}

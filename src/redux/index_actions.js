@@ -5,6 +5,7 @@ export const GET_POPULAR_MOVIES = "GET_POPULAR_MOVIES";
 export const GET_FAVORITE_MOVIES = "GET_FAVORITE_MOVIES";
 export const ADD_FAVORITE_MOVIES = "ADD_FAVORITE_MOVIES";
 export const REMOVE_FAVORITE_MOVIES = "REMOVE_FAVORITE_MOVIES";
+export const GET_SEARCHED_MOVIES = "GET_SEARCHED_MOVIES";
 
 
 export const getMovieRecommendationsAction = () => async (dispatch) => {
@@ -37,8 +38,6 @@ export const getMyFavoriteMovies = ()=>{
     type:GET_FAVORITE_MOVIES,
     payload: window.localStorage,
    }
-      
-    
 }
 
 export const addFavoriteMovieAction = (favoriteMovies)=>{
@@ -52,6 +51,20 @@ export const removeFavoriteMovieAction = (favoriteMovies)=>{
     type: REMOVE_FAVORITE_MOVIES,
     payload: favoriteMovies
   }
+}
+
+export const searchMoviesAction = (query)=>async (dispatch)=>{
+    const data = await fetch(
+      `https://api.themoviedb.org/3/search/movie?api_key=ef3ea0075e58d32f265c175d329ef49e&language=en-US&query=${query}&page=1&include_adult=false`
+    );
+    const searchedMovies = await data.json();
+    dispatch({
+      type: GET_SEARCHED_MOVIES,
+      payload: searchedMovies.results,
+    });
+
+
+
 }
 
 

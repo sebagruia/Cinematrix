@@ -3,16 +3,22 @@
     width:100%;
     margin-top:50px;
     padding:50px 0;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
     color:#E5E5E5;
+}
+
+.copyright{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .footer-container p{
     font-weight:200;
     opacity:0.7;
     margin: 0;
-    padding-right: 20px;
+    padding-right: 10px;
 }
 
 .gitHub-container{
@@ -22,4 +28,18 @@
 
 .gitHub-container img{
     width:100%;
+}
+
+.powered{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.powered p{
+    width: 70px;
+    padding: 0px;
+}
+
+.powered img{
+    width: 70%;
 }
