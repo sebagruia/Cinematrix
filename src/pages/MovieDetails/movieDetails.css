@@ -86,3 +86,24 @@
     font-weight: 200;
     font-size: 1.1rem;
 }
+
+
+/* Media Query */
+
+@media screen and (max-width:768px){
+    .movieDetails-container {
+        width: 90%;
+        flex-direction: column;
+    }
+    .movie-details-container {
+        margin-top: 20px;
+    }
+    .movie-poster-container {
+        display: flex;
+        justify-content: center;
+    }
+    .movie-poster-container img {
+        width: 80%;
+        height: auto;
+    }
+}

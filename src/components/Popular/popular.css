@@ -1,49 +1,86 @@
 /* POPULAR-MOVIES SECTION */
-.popular_movies_section{
-    display:grid;
-    grid-template-columns: repeat(7, auto);
-    grid-gap: 20px 0px;
-    padding: 50px 0;
+.popular_movies_section {
+  display: grid;
+  grid-template-columns: repeat(7, auto);
+  grid-gap: 20px 0px;
+  padding: 50px 0;
 }
 
-.popular_movies-hr{
-    width: 70%;
-     margin-top:70px; 
-     margin-bottom:50px; 
-    border-top: 0.5px solid #966800;
+.popular_movies-hr {
+  width: 70%;
+  margin-top: 70px;
+  margin-bottom: 50px;
+  border-top: 0.5px solid #966800;
 }
-.popular_movies-title{
-    color:#E5E5E5;
-    grid-column: 1 / span 2;
+.popular_movies-title {
+  color: #e5e5e5;
+  grid-column: 1 / span 2;
 }
-.popular_movies-title h1{
-    
-    font-size: 2.2rem;
+.popular_movies-title h1 {
+  font-size: 2.2rem;
 }
-.popular_movies-title h2{
+.popular_movies-title h2 {
+  font-size: 1.7rem;
+}
+.popular_movies-title h2,
+h5 {
+  font-weight: 200;
+}
+.popular_movies-title h5 {
+  opacity: 0.5;
+}
+.popular_movies-title h5:hover {
+  opacity: 1;
+}
+
+.popular_movies-title h5 img {
+  width: 14px;
+  margin-left: 5px;
+}
+
+.text-hr {
+  border-top: 0.5px solid #e5e5e5;
+  opacity: 0.4;
+  width: 70%;
+  margin-left: 0;
+}
+
+/* Media Query */
+
+@media screen and (max-width: 480px) {
+  .popular_movies_section {
+    grid-template-columns: repeat(3, auto);
+    grid-column-gap: 0px;
+    grid-row-gap: 20px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .popular_movies-title h1 {
+    font-size: 1.9rem;
+  }
+  .popular_movies-title h2 {
     font-size: 1.7rem;
-}
-.popular_movies-title h2,h5{
-    font-weight: 200;
-}
-.popular_movies-title h5{
-    opacity:0.5;
-}
-.popular_movies-title h5:hover{
-    opacity:1;
+  }
+  .popular_movies-title h5 {
+    font-size: 1.1rem;
+  }
 }
 
-.popular_movies-title h5 img{
-    width: 14px;
-    margin-left:5px;
-    
+@media screen and (min-width:481px) and (max-width:767px){
+    .popular_movies_section {
+        grid-template-columns: repeat(4, auto);
+    }
+}
+@media screen and (min-width:768px) and (max-width:992px){
+    .popular_movies_section {
+        grid-template-columns: repeat(5, auto);
+    }
 }
 
-.text-hr{
-    border-top: 0.5px solid #E5E5E5;
-    opacity:0.4;
-    width:70%;
-    margin-left: 0;
+@media screen and (max-width:992px){
+  .popular_movies-hr {
+    margin-top: 50px;
+    margin-bottom: 30px;
 }
-
-
+}

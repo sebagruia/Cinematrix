@@ -35,6 +35,7 @@
     grid-template-columns: repeat(3,150px);
     justify-content: space-around;
     grid-row-gap:20px;
+    grid-column-gap: 10px;
     padding: 20px;
 
 }
@@ -43,4 +44,25 @@
     width:150px;
     height:100px;
     border:1px solid #fff;
+}
+
+/* Media Query */
+
+@media screen and (max-width:768px){
+    .today_recomandation_section {
+        height: 450px;
+        margin-top: 20px;
+    }
+    .free-column {
+        flex: 0;
+    }
+    .recomandations-movies {
+        grid-template-columns: repeat(2,150px);
+        justify-content: center;
+        padding: 10px;
+    }
+    .recomandation-title {
+        align-self: center;
+        padding-right: 0px;
+    }
 }

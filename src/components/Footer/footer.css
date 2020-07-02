@@ -43,3 +43,18 @@
 .powered img{
     width: 70%;
 }
+
+/* Media Query */
+
+@media screen and (max-width:768px){
+    .footer-container {
+        margin-top: 0px;
+        flex-direction: column;
+    }
+    .theMovieLogo-container{
+        width:160px;
+    }
+    .powered img {
+        width: 100%;
+    }
+}
