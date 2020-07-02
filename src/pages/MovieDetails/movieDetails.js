@@ -10,7 +10,6 @@ const MovieDetails = (props) => {
     title,
     overview,
     release_date,
-    id,
     votes,
   } = props.location.state;
   console.log(imagePath);

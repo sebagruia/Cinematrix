@@ -7,12 +7,13 @@ import Form from "react-bootstrap/Form";
 import FormControl from "react-bootstrap/FormControl";
 import Button from "react-bootstrap/Button";
 import { searchMoviesAction } from "../../redux/index_actions";
+import logo from "../../assets/images_and_icons/logo_dark_blue.png"
 
 const Header = (props) => {
   const { dispatch } = props;
   const history = useHistory();
 
-  const [query, setQuery] = useState();
+  const [query, setQuery] = useState("");
 
   const handleOnChange = (event) => {
     setQuery(event.target.value);
@@ -21,7 +22,7 @@ const Header = (props) => {
   const handleOnSubmit = (event) => {
     event.preventDefault();
     dispatch(searchMoviesAction(query));
-    history.push("/search", { query: query });
+    history.push("/search", { query:query });
     setQuery("");
   };
 
@@ -36,7 +37,7 @@ const Header = (props) => {
 
         <Navbar.Brand href="#home" onClick={redirectToHome} role="button">
           <img
-            src="/logo dark blue.png"
+            src={logo}
             className="d-inline-block align-top"
             alt="Cinematrix logo"
           />
