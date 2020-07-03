@@ -21,6 +21,7 @@
     width:100%;
 }
 .search-result-title{
+    text-align: center;
     color:#113036;
 }
 .search-result-title h1{
