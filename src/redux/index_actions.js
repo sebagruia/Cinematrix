@@ -2,6 +2,7 @@ import { showLoading, hideLoading } from "react-redux-loading-bar";
 import { generatingGenreIdArray } from "../utils/utils";
 export const GET_MOVIE_RECOMMENDATIONS = "GET_MOVIE_RECOMANDATIONS";
 export const GET_POPULAR_MOVIES = "GET_POPULAR_MOVIES";
+export const GET_POPULAR_TV = "GET_POPULAR_TV";
 export const GET_FAVORITE_MOVIES = "GET_FAVORITE_MOVIES";
 export const ADD_FAVORITE_MOVIES = "ADD_FAVORITE_MOVIES";
 export const REMOVE_FAVORITE_MOVIES = "REMOVE_FAVORITE_MOVIES";
@@ -33,6 +34,22 @@ export const getPopularMoviesAction = () => async (dispatch) => {
     dispatch({
       type: GET_POPULAR_MOVIES,
       payload: popularMovies.results,
+    });
+  } catch (error) {
+    console.log(`Error when fetching Popular Movies ${error}`);
+  }
+
+  dispatch(hideLoading());
+};
+export const getPopularTvAction = () => async (dispatch) => {
+  try {
+    const data = await fetch(
+      "https://api.themoviedb.org/3/tv/popular?api_key=ef3ea0075e58d32f265c175d329ef49e&language=en-US&page=1"
+    );
+    const popularTvSeries = await data.json();
+    dispatch({
+      type: GET_POPULAR_TV,
+      payload: popularTvSeries.results,
     });
   } catch (error) {
     console.log(`Error when fetching Popular Movies ${error}`);

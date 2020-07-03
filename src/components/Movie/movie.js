@@ -10,6 +10,7 @@ import {
   addToFavoriteToLocalStorage,
   removeFavoriteFromLocalStorage,
 } from "../../utils/utils";
+import Selector from "../Selector/selector";
 
 const Movie = ({
   dispatch,
@@ -20,10 +21,8 @@ const Movie = ({
   id,
   votes,
 }) => {
-
   const [value, setValue] = useState("move");
   const movieObject = { title, imagePath, overview, release_date, votes, id };
-  
 
   const myStorage = window.localStorage;
 
@@ -63,41 +62,27 @@ const Movie = ({
         style={
           imagePath === null
             ? {
-              border: "1px solid #113036",
-              borderRadius: "10px",
-            }
+                border: "1px solid #113036",
+                borderRadius: "10px",
+              }
             : null
         }
       >
         <div className="votes">
           <h6>{votes}</h6>
         </div>
-        <div className="favorite-selector" onClick={(e) => e.preventDefault()}>
-          <select
-            name="options"
-            value={value}
-            className="selector"
-            role="button"
-            onChange={handleOnChange}
-          >
-            <option value="move" disabled>
-              Move to...
-            </option>
-            <option value="favorite">Favorite</option>
-            <option value="none">None</option>
-          </select>
-        </div>
+        <Selector handleOnChange={handleOnChange} value={value}/>
         {imagePath ? (
-          <img
-            src={`https://image.tmdb.org/t/p/w185/${imagePath}`}
-            alt="movie poster"
-          />
+            <img
+              src={`https://image.tmdb.org/t/p/w185/${imagePath}`}
+              alt="movie poster"
+            />
         ) : (
-            <div className="safety-div">
-              <h4 className="title">{title}</h4>
-              <h4 className="no-image">No Image Available</h4>
-            </div>
-          )}
+          <div className="safety-div">
+            <h4 className="title">{title}</h4>
+            <h4 className="no-image">No Image Available</h4>
+          </div>
+        )}
       </div>
     </Link>
   );

@@ -2,14 +2,20 @@ import React, { Fragment, useState } from "react";
 import "./popular.css";
 import { connect } from "react-redux";
 import Movie from "../Movie/movie";
+import Switch from "../Switch/switch";
 import arrow from "../../assets/images_and_icons/arrow.png";
 import arrowClose from "../../assets/images_and_icons/arrow-close.png";
 
-const Popular = ({ popularMovies }) => {
+const Popular = ({ popularMovies, popularTvSeries }) => {
   const [view, setView] = useState(false);
+  const [active, setActive] = useState(true);
 
   const handleView = () => {
     setView(!view);
+  };
+
+  const handleSwitch = () => {
+    setActive(!active);
   };
 
   return (
@@ -22,7 +28,10 @@ const Popular = ({ popularMovies }) => {
       }
     >
       <div className="popular_movies-title">
-        <h1>Popular Movies</h1>
+        <h1>
+          Popular{" "}
+          <Switch active={active} handleSwitch={handleSwitch}/>
+        </h1>
         <h2>to Watch Now</h2>
         <hr className="text-hr" />
         <h5 role="button" onClick={handleView}>
@@ -39,23 +48,36 @@ const Popular = ({ popularMovies }) => {
           )}
         </h5>
       </div>
-      {Object.values(popularMovies).map((popularMovie) => (
-        <Movie
-          key={popularMovie.id}
-          id={popularMovie.id}
-          imagePath={popularMovie.poster_path}
-          title={popularMovie.title}
-          overview={popularMovie.overview}
-          release_date={popularMovie.release_date}
-          votes={popularMovie.vote_average}
-        />
-      ))}
+      {active
+        ? Object.values(popularMovies).map((popularMovie) => (
+            <Movie
+              key={popularMovie.id}
+              id={popularMovie.id}
+              imagePath={popularMovie.poster_path}
+              title={popularMovie.title}
+              overview={popularMovie.overview}
+              release_date={popularMovie.release_date}
+              votes={popularMovie.vote_average}
+            />
+          ))
+        : Object.values(popularTvSeries).map((popularTv) => (
+            <Movie
+              key={popularTv.id}
+              id={popularTv.id}
+              imagePath={popularTv.poster_path}
+              title={popularTv.name}
+              overview={popularTv.overview}
+              release_date={popularTv.first_air_date}
+              votes={popularTv.vote_average}
+            />
+          ))}
     </div>
   );
 };
 const mapStateToProps = (state) => {
   return {
     popularMovies: state.movies.popularMovies,
+    popularTvSeries: state.movies.popularTvSeries,
   };
 };
 
