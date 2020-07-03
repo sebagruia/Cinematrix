@@ -7,3 +7,9 @@
     background-color: #548a77;
     transition:background-color 1s;
   }
+
+  .switch-span img{
+    width: 16px;
+    padding-left: 5px;
+    margin-top: -2px;
+  }

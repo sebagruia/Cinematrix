@@ -1,5 +1,6 @@
 import React from "react";
 import "./switch.css";
+import arrowOpen from "../../assets/images_and_icons/arrow-open.png"
 
 const Switch = ({ active, handleSwitch }) => {
   return (
@@ -12,6 +13,7 @@ const Switch = ({ active, handleSwitch }) => {
       }
     >
       {active ? "Movies" : "TV"}
+      <img src={arrowOpen}  alt="arrow"/>
     </span>
   );
 };
