@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/Cinematrix/static/css/main.c214f107.chunk.css",
+    "main.css": "/Cinematrix/static/css/main.42dcc267.chunk.css",
     "main.js": "/Cinematrix/static/js/main.c3b30825.chunk.js",
     "main.js.map": "/Cinematrix/static/js/main.c3b30825.chunk.js.map",
     "runtime-main.js": "/Cinematrix/static/js/runtime-main.7deb2310.js",
@@ -8,9 +8,9 @@
     "static/js/2.e2f1ef84.chunk.js": "/Cinematrix/static/js/2.e2f1ef84.chunk.js",
     "static/js/2.e2f1ef84.chunk.js.map": "/Cinematrix/static/js/2.e2f1ef84.chunk.js.map",
     "index.html": "/Cinematrix/index.html",
-    "precache-manifest.10d0c463324a7e41720613f76fc8bf41.js": "/Cinematrix/precache-manifest.10d0c463324a7e41720613f76fc8bf41.js",
+    "precache-manifest.07c4c134e2d2479e4f860fa58cf5a2d2.js": "/Cinematrix/precache-manifest.07c4c134e2d2479e4f860fa58cf5a2d2.js",
     "service-worker.js": "/Cinematrix/service-worker.js",
-    "static/css/main.c214f107.chunk.css.map": "/Cinematrix/static/css/main.c214f107.chunk.css.map",
+    "static/css/main.42dcc267.chunk.css.map": "/Cinematrix/static/css/main.42dcc267.chunk.css.map",
     "static/js/2.e2f1ef84.chunk.js.LICENSE.txt": "/Cinematrix/static/js/2.e2f1ef84.chunk.js.LICENSE.txt",
     "static/media/logo_dark_blue.png": "/Cinematrix/static/media/logo_dark_blue.0896cd36.png",
     "static/media/recommendations.css": "/Cinematrix/static/media/red-chairs.fbd386c1.jpg",
@@ -19,7 +19,7 @@
   "entrypoints": [
     "static/js/runtime-main.7deb2310.js",
     "static/js/2.e2f1ef84.chunk.js",
-    "static/css/main.c214f107.chunk.css",
+    "static/css/main.42dcc267.chunk.css",
     "static/js/main.c3b30825.chunk.js"
   ]
 }
