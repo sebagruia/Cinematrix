@@ -9,9 +9,11 @@
 This web app uses the services of the  [The Movie Data API ](https://www.themoviedb.org/)to populate it with movie content.
 
 The App has 3 pages:  
-1. Homepage which displays the Recommendation, Popular, and Favorite sections;
+1. Homepage which displays the Recommendation, Popular Movies, Popular TV Shows, and Favorite sections;
 2. The Search page where the user can look up for movies by title;
 3. MovieDetail page where extra information about the specific movie is presented.
+
+To switch to popular TV Shows, just press the Movie button.
 
 The Favorite section is populated by the user using the selector icon that can be found on each movie component that is displayed.
 
