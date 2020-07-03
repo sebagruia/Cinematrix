@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/Cinematrix/static/css/main.42dcc267.chunk.css",
-    "main.js": "/Cinematrix/static/js/main.c3b30825.chunk.js",
-    "main.js.map": "/Cinematrix/static/js/main.c3b30825.chunk.js.map",
+    "main.css": "/Cinematrix/static/css/main.e467cbd4.chunk.css",
+    "main.js": "/Cinematrix/static/js/main.d88d3faa.chunk.js",
+    "main.js.map": "/Cinematrix/static/js/main.d88d3faa.chunk.js.map",
     "runtime-main.js": "/Cinematrix/static/js/runtime-main.7deb2310.js",
     "runtime-main.js.map": "/Cinematrix/static/js/runtime-main.7deb2310.js.map",
-    "static/js/2.e2f1ef84.chunk.js": "/Cinematrix/static/js/2.e2f1ef84.chunk.js",
-    "static/js/2.e2f1ef84.chunk.js.map": "/Cinematrix/static/js/2.e2f1ef84.chunk.js.map",
+    "static/js/2.7f58c7c0.chunk.js": "/Cinematrix/static/js/2.7f58c7c0.chunk.js",
+    "static/js/2.7f58c7c0.chunk.js.map": "/Cinematrix/static/js/2.7f58c7c0.chunk.js.map",
     "index.html": "/Cinematrix/index.html",
-    "precache-manifest.07c4c134e2d2479e4f860fa58cf5a2d2.js": "/Cinematrix/precache-manifest.07c4c134e2d2479e4f860fa58cf5a2d2.js",
+    "precache-manifest.3df03f006e205c40215f6034f807d0c5.js": "/Cinematrix/precache-manifest.3df03f006e205c40215f6034f807d0c5.js",
     "service-worker.js": "/Cinematrix/service-worker.js",
-    "static/css/main.42dcc267.chunk.css.map": "/Cinematrix/static/css/main.42dcc267.chunk.css.map",
-    "static/js/2.e2f1ef84.chunk.js.LICENSE.txt": "/Cinematrix/static/js/2.e2f1ef84.chunk.js.LICENSE.txt",
+    "static/css/main.e467cbd4.chunk.css.map": "/Cinematrix/static/css/main.e467cbd4.chunk.css.map",
+    "static/js/2.7f58c7c0.chunk.js.LICENSE.txt": "/Cinematrix/static/js/2.7f58c7c0.chunk.js.LICENSE.txt",
     "static/media/logo_dark_blue.png": "/Cinematrix/static/media/logo_dark_blue.0896cd36.png",
     "static/media/recommendations.css": "/Cinematrix/static/media/red-chairs.fbd386c1.jpg",
     "static/media/theMovieAPI.svg": "/Cinematrix/static/media/theMovieAPI.8b2b68f8.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.7deb2310.js",
-    "static/js/2.e2f1ef84.chunk.js",
-    "static/css/main.42dcc267.chunk.css",
-    "static/js/main.c3b30825.chunk.js"
+    "static/js/2.7f58c7c0.chunk.js",
+    "static/css/main.e467cbd4.chunk.css",
+    "static/js/main.d88d3faa.chunk.js"
   ]
 }
