@@ -1,7 +1,7 @@
 import React from "react";
 import "./footer.css";
 import gitHubIcon from "../../assets/images_and_icons/gitHubIcon.png";
-import theMovieLogo from "../../assets/images_and_icons/theMovieAPI.svg";
+import theMovieLogo from "../../assets/images_and_icons/TheMovieAPI.svg";
 
 const Footer = () => {
   return (

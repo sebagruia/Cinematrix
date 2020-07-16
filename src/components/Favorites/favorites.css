@@ -41,7 +41,22 @@
 }
 
 .my-favorites-movie-container {
-  overflow: hidden;
+  overflow-x: auto;
+}
+.my-favorites-movie-container::-webkit-scrollbar {
+  height: 5px!important;
+}
+
+.my-favorites-movie-container::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+ 
+.my-favorites-movie-container::-webkit-scrollbar-thumb {
+  background: #888; 
+}
+
+.my-favorites-movie-container::-webkit-scrollbar-thumb:hover {
+  background: #555; 
 }
 
 .my-favorites-slider {
@@ -54,6 +69,8 @@
   padding: 50px 0;
   transition: transform 1s;
 }
+
+
 
 /* Media Query */
 
