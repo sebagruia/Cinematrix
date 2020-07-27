@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "d534fcd54afae067272fdb8d588b87a0",
+    "revision": "b42834fd546db0019157191bfadff410",
     "url": "/Cinematrix/index.html"
   },
   {
-    "revision": "ec231e502b03ef3f175d",
-    "url": "/Cinematrix/static/css/main.cf89db9e.chunk.css"
+    "revision": "068870ebce30986d5a71",
+    "url": "/Cinematrix/static/css/main.b3bf7b0a.chunk.css"
   },
   {
     "revision": "e69c7b51e7d780bcd800",
@@ -16,7 +16,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Cinematrix/static/js/2.aa0fa943.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "ec231e502b03ef3f175d",
+    "revision": "068870ebce30986d5a71",
     "url": "/Cinematrix/static/js/main.62099b60.chunk.js"
   },
   {
