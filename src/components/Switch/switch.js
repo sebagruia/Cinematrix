@@ -12,7 +12,7 @@ const Switch = ({ active, handleSwitch }) => {
         active ? { backgroundColor: "#548a77" } : { backgroundColor: "#966800" }
       }
     >
-      {active ? "Movies" : "TV"}
+      {active ? "MOVIES" : "TV"}
       <img src={arrowOpen}  alt="arrow"/>
     </span>
   );

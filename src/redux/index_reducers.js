@@ -6,6 +6,10 @@ import {
   ADD_FAVORITE_MOVIES,
   REMOVE_FAVORITE_MOVIES,
   GET_SEARCHED_MOVIES,
+  GET_TRENDING_MOVIES_OR_TV,
+  GET_TOP_RATED_MOVIES_OR_TV,
+  GET_IN_THEATRES_MOVIES,
+  SET_MEDIA_TYPE
 } from "./index_actions";
 
 const initialState = {
@@ -13,7 +17,16 @@ const initialState = {
   popularMovies: {},
   favoriteMovies: {},
   searchedMovies:{},
-  popularTvSeries:{}
+  trendingMoviesOrTv:{},
+  topRatedMoviesOrTv:{},
+  popularTvSeries:{},
+  inTheatresMovies:{},
+  mediaType:{
+    popular:true,
+    trending:false,
+    top_rated:false,
+    now_playing:false
+  }
 };
 
 const movies = (state = initialState, action) => {
@@ -27,6 +40,21 @@ const movies = (state = initialState, action) => {
       return {
         ...state,
         popularMovies: { ...action.payload },
+      };
+    case GET_IN_THEATRES_MOVIES:
+      return {
+        ...state,
+        inTheatresMovies: { ...action.payload },
+      };
+    case   GET_TRENDING_MOVIES_OR_TV:
+      return {
+        ...state,
+        trendingMoviesOrTv: { ...action.payload },
+      };
+    case   GET_TOP_RATED_MOVIES_OR_TV:
+      return {
+        ...state,
+        topRatedMoviesOrTv: { ...action.payload },
       };
     case GET_POPULAR_TV:
       return {
@@ -52,6 +80,11 @@ const movies = (state = initialState, action) => {
       return {
         ...state,
         searchedMovies: { ...action.payload },
+      };
+    case SET_MEDIA_TYPE:
+      return {
+        ...state,
+        mediaType: { ...action.payload },
       };
     default:
       return state;
