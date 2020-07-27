@@ -23,3 +23,11 @@
 .no-image{
     font-size: 0.8rem;
 }
+
+@media screen and (max-width:360px){
+    .recomandation-movie{
+        width:135px;
+        height:85px;
+       
+    }
+}

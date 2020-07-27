@@ -50,3 +50,11 @@
     font-size: 0.8rem;
     color:#E5E5E5;
 }
+
+/* Media Query */
+
+@media screen and (max-width:360px){
+    .movie{
+        width:90px;
+    }
+}

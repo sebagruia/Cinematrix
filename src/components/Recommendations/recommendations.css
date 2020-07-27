@@ -57,7 +57,7 @@
         flex: 0;
     }
     .recomandations-movies {
-        grid-template-columns: repeat(2,150px);
+        grid-template-columns: repeat(2,auto);
         justify-content: center;
         padding: 10px;
     }
