@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "a49f3b42155e49ca6e387705eead5221",
+    "revision": "d534fcd54afae067272fdb8d588b87a0",
     "url": "/Cinematrix/index.html"
   },
   {
-    "revision": "41a2ca0489bb611243e5",
-    "url": "/Cinematrix/static/css/main.22b987c6.chunk.css"
+    "revision": "ec231e502b03ef3f175d",
+    "url": "/Cinematrix/static/css/main.cf89db9e.chunk.css"
   },
   {
-    "revision": "1faf77def36285709e63",
-    "url": "/Cinematrix/static/js/2.7f58c7c0.chunk.js"
+    "revision": "e69c7b51e7d780bcd800",
+    "url": "/Cinematrix/static/js/2.aa0fa943.chunk.js"
   },
   {
     "revision": "3453b8997016469371284a28c0e873e2",
-    "url": "/Cinematrix/static/js/2.7f58c7c0.chunk.js.LICENSE.txt"
+    "url": "/Cinematrix/static/js/2.aa0fa943.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "41a2ca0489bb611243e5",
-    "url": "/Cinematrix/static/js/main.a9698698.chunk.js"
+    "revision": "ec231e502b03ef3f175d",
+    "url": "/Cinematrix/static/js/main.62099b60.chunk.js"
   },
   {
     "revision": "fe12bbbdc06a0223ffce",
